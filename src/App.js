@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { Component } from 'react';
+import TransactionsList from './components/TransactionsList';
+import AddTransaction from './components/AddTransaction';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        transactionsUpdated: false
+    };
+
+    handleAddTransaction = () => {
+        this.setState({ transactionsUpdated: true }, () => {
+            this.setState({ transactionsUpdated: false });
+        });
+    };
+
+    render() {
+        return (
+            <div className="container">
+                <h1>Office Transactions</h1>
+                <AddTransaction onAddTransaction={this.handleAddTransaction} />
+                <TransactionsList transactionsUpdated={this.state.transactionsUpdated} />
+            </div>
+        );
+    }
 }
 
 export default App;

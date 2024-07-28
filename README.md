@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# Office Transactions Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+The Office Transactions Management System is a web application designed for an account manager to manage daily expenses for cash inflow and outflow. The application provides a user-friendly interface to view transactions and add new ones, while automatically maintaining a running balance.
 
-## Available Scripts
+## Features
+- View all office transactions with details such as date, description, type (credit/debit), amount, and running balance.
+- Add new transactions with a form that includes transaction type, amount, description, and date.
+- Automatically calculate and display the running balance based on transactions.
 
-In the project directory, you can run:
+## Technologies Used
+- **Backend**: Node.js with Express and SQLite
+- **Frontend**: React
+- **Styling**: Bootstrap
 
-### `npm start`
+## Prerequisites
+- Node.js (v14 or later)
+- npm (v6 or later)
+- Git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend Setup
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/office-transactions-backend.git
+   cd office-transactions-backend
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Here's a detailed README file for your transaction management project. This README covers project description, installation steps, usage instructions, and other relevant information.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+markdown
+Copy code
+# Office Transactions Management System
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Introduction
+The Office Transactions Management System is a web application designed for an account manager to manage daily expenses for cash inflow and outflow. The application provides a user-friendly interface to view transactions and add new ones, while automatically maintaining a running balance.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
+- View all office transactions with details such as date, description, type (credit/debit), amount, and running balance.
+- Add new transactions with a form that includes transaction type, amount, description, and date.
+- Automatically calculate and display the running balance based on transactions.
 
-### `npm run eject`
+## Technologies Used
+- **Backend**: Node.js with Express and SQLite
+- **Frontend**: React
+- **Styling**: Bootstrap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Prerequisites
+- Node.js (v14 or later)
+- npm (v6 or later)
+- Git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend Setup
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/office-transactions-backend.git
+   cd office-transactions-backend
+Install Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy code
+npm install
+Run the Server
 
-## Learn More
+bash
+Copy code
+node server.js
+The server should now be running on http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Frontend Setup
+Clone the Repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy code
+git clone https://github.com/yourusername/office-transactions-frontend.git
+cd office-transactions-frontend
+Install Dependencies
 
-### Code Splitting
+bash
+Copy code
+npm install
+Run the React Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+bash
+Copy code
+npm start
+The application should now be running on http://localhost:3000.
 
-### Analyzing the Bundle Size
+Usage
+Viewing Transactions
+Navigate to the root URL of the frontend application.
+The TransactionsList component will display a table with all transactions retrieved from the backend.
+Adding a Transaction
+Click the + Add Transaction button to navigate to the form for adding a new transaction.
+Fill in the transaction details (type, amount, description, date) and click Save.
+The new transaction will be saved to the backend and the transactions list will be updated.
+API Endpoints
+GET /api/transactions
+Retrieves all transactions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Response
+json
+Copy code
+[
+  {
+    "id": 1,
+    "type": "credit",
+    "amount": 5000,
+    "description": "Credited to Office Account",
+    "date": "2020-02-17",
+    "running_balance": 5000
+  },
+  ...
+]
+start: npm install
+you can see the all transaction list on the date .
